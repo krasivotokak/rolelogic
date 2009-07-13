@@ -1,8 +1,13 @@
 require 'test/unit'
-require "rubygems"
+require 'rubygems'
 require 'active_support'
-require "erb"
-require "ostruct"
+require 'erb'
+require 'ostruct'
+require 'shoulda'
+
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+$LOAD_PATH.unshift(File.dirname(__FILE__))
+
 # render the RoleRequirementSystem template and "eval it"
 
 def render_template_with_locals(abs_name, locals = {})
